@@ -1,0 +1,11 @@
+# workflow name
+name: Deploy To Github Pages
+
+# 当有 push 到仓库和外部触发的时候就运行
+on: [push, repository_dispatch]
+
+# 推送之后执行一系列的任务
+jobs:
+  deploy:
+    name: Deploy Vitepress Public To Pages
+    runs-on: ubuntu-latest

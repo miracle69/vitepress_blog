@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:server": "vitepress serve docs"
+  },
+  "author": "FengYuanZhi",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^0.22.4"
+  },
+  "dependencies": {
+    "vitepress-theme-demoblock": "^1.4.2"
+  }
+}

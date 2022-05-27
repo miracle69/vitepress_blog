@@ -1,11 +1,46 @@
-# workflow name
-name: Deploy To Github Pages
+name: 打包并上传 vitepress 博客
 
-# 当有 push 到仓库和外部触发的时候就运行
-on: [push, repository_dispatch]
+# 当有 push 代码的时候 哪个分支会受到影响 这里是 master 主分支
+on: 
+  push:
+    branches:
+      - master
 
 # 推送之后执行一系列的任务
 jobs:
-  deploy:
-    name: Deploy Vitepress Public To Pages
+  build:
+    # 运行 ubuntu 虚拟机系统
     runs-on: ubuntu-latest
+    steps:
+      # 获取代码
+      - name: 迁出代码
+      uses: actions/chechkout@master
+
+      # 使用action库  actions/setup-node安装node
+      - name: 安装 node.js
+        uses: actions/setup/setup-node@v1
+        with:
+          node-version: 14.18.0
+    
+      - name: 安装依赖
+        run: npm install
+      
+      - name: 打包
+        run: npm run docs:build
+      
+      # 上传到百度智能云
+      - name: 发布到百度智能云
+        uses: easingthemes/ssh-deploy@v2.1.1
+        env:
+          # 私钥 PRIVATE_KEY 要和 仓库的私钥名一致 也就是私钥名也要叫 PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          # SCP参数
+          ARGS: '-avzr --delete'
+          # 源目录 -- 打包后的文件目录，也就是这个文件会被传到服务器上
+          SOURCE: 'docs/.vitepress/dist'
+          # 服务器ip
+          REMOTE_HOST: '180.76.145.206'
+          # 用户
+          REMOTE_USER: 'root'
+          # 目标地址 -- 上传到服务器的地址
+          TARGET: '/me/vitepress-blog'

@@ -1,6 +1,7 @@
 <template>
-  <h1>Custom Layout!</h1>
-  <Content />
+  <div>
+    
+  </div>
 </template>
 
 <script>

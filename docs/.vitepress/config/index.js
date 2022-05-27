@@ -21,10 +21,10 @@ const config = {
     sidebar,
     nav,
     demoblock: lang,
-    logo: '/author.jpeg',
+    logo: '/author.png',
     lastUpdated: 'Last Update',
     author: 'YuanZhi Feng',
-    authorAvatar: '/author.jpeg',  // 作者头像
+    authorAvatar: '/author.png',  // 作者头像
     record: '未备案', // 备案
   },
 }

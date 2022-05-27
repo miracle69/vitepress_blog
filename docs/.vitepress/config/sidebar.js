@@ -1,4 +1,4 @@
-import { getMsg } from './util';
+import { getMsg } from "./util";
 
 export default {
   "/": getMsg(),

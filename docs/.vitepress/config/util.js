@@ -3,6 +3,7 @@ const path = require("path");
 const { resolve } = path;
 
 export const getMsg = (path = resolve(__dirname, "../../article")) => {
+  // const getMsg = (path = resolve(__dirname, "../../article")) => {
   let res = fs.readdirSync(path);
   if (res) {
     let arr = res.map((item) => {
@@ -21,6 +22,7 @@ export const getMsg = (path = resolve(__dirname, "../../article")) => {
       }
       return item;
     });
+    // console.log(arr);
     return arr;
   } else {
     console.warn("无文章");
@@ -28,9 +30,13 @@ export const getMsg = (path = resolve(__dirname, "../../article")) => {
 };
 
 /**
- * 提取文件名
- * @param {string} path 
+ *
+ * @param {string} path
+ * @returns
  */
 function translateDir(path) {
   return path.replace(/\\/g, "/").split("docs")[1].split(".")[0];
 }
+
+// console.log("aaa", getMsg()[0]);
+// module.exports = getMsg;

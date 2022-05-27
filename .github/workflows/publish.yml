@@ -43,4 +43,4 @@ jobs:
           # 用户
           REMOTE_USER: 'root'
           # 目标地址 -- 上传到服务器的地址
-          TARGET: '/me/vitepress-blog'
+          TARGET: '/me/vitepressBlog'

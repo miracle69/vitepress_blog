@@ -18,7 +18,7 @@ jobs:
 
       # 使用action库  actions/setup-node安装node
       - name: 安装 node.js
-        uses: actions/setup/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: 14.18.0
     

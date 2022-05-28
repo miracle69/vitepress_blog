@@ -3,7 +3,7 @@ const head = [
     'link',
     {
       rel: 'icon',
-      href: '/favicon.ico',
+      href: '/author.png',
     },
   ],
 ]

@@ -103,7 +103,6 @@ docker ps -a
 docker stop 42f63afa795e
 ```
 
-![stop docker](./assets/docker_stop.jpg)
 
 移除容器
 
@@ -118,8 +117,6 @@ docker images
 # feb5d9fea6a5 是 image id
 docker rmi feb5d9fea6a5
 ```
-
-![rm_image](./assets/docker_rm_image.jpg)
 
 
 
@@ -228,8 +225,6 @@ docker run -it --name tomcat123 -p 8888:8080 tomcat:9.0
 ```
 
 注意该命令最后不要加`/bin/bash`
-
-![images](E:\md\assets\docker-P.png)
 
 **步骤4：对Tomcat镜像进行修改**
 

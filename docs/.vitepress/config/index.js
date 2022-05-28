@@ -11,13 +11,13 @@ const config = {
   markdown,
   themeConfig: {
     search: true,  // 展开搜索
-    algolia: {
-      appKey: '',
-      indexName: '',
-      searchParameters: {
-        faeFilters: ['tags:guide,api'],
-      },
-    },
+    // algolia: {
+    //   appKey: '',
+    //   indexName: '',
+    //   searchParameters: {
+    //     faeFilters: ['tags:guide,api'],
+    //   },
+    // },
     sidebar,
     nav,
     demoblock: lang,

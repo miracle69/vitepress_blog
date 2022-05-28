@@ -25,6 +25,14 @@ jobs:
       - name: 安装依赖
         run: npm install
       
+      # 线上调试
+      - name: debugger
+        uses: shaowenchen/debugger-action@v2
+        timeout-minutes: 30
+        continue-on-error: true
+        with:
+          ngrok_token: ${{ secrets.NGROK_TOKEN }}
+
       - name: 打包
         run: npm run docs:build
       

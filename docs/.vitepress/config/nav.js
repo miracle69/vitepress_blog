@@ -5,10 +5,6 @@ const nav = [
     icon: 'reco-message',
     items: [
       {
-        text: '人生进度条',
-        link: 'http://127.0.0.1:3000/',
-      },
-      {
         text: '每天60s读懂世界',
         link: 'https://api.vvhan.com/api/60s',
       }
@@ -21,11 +17,6 @@ const nav = [
       {
         text: 'Gitee',
         link: 'https://gitee.com/clover99',
-        icon: 'reco-github',
-      },
-      {
-        text: '个人空间',
-        link: 'http://127.0.0.1:3000/home',
         icon: 'reco-github',
       },
       {

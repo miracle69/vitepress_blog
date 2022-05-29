@@ -11,9 +11,6 @@ const nav = [
       {
         text: '人生重开模拟器',
         link: 'http://liferestart.syaro.io/public/index.html'
-      },
-      {
-        text: '996身临其境'
       }
     ]
   },

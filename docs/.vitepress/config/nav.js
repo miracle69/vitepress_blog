@@ -7,6 +7,13 @@ const nav = [
       {
         text: '每天60s读懂世界',
         link: 'https://api.vvhan.com/api/60s',
+      },
+      {
+        text: '人生重开模拟器',
+        link: 'http://liferestart.syaro.io/public/index.html'
+      },
+      {
+        text: '996身临其境'
       }
     ]
   },

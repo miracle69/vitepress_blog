@@ -49,8 +49,6 @@
 
 分享编程开发干货，欢迎关注😁
 
-![code](./assets/gongzhonghao.png)
-
 我的个人微信，寻找志同道＆的朋友一起交流成长☘️。
 
 ![code](./assets/weixin.png)
